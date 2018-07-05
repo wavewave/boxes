@@ -15,7 +15,7 @@ cabal-version:       >= 1.9.2
 -- Minimum Cabal version supporting test suites
 
 library
-  build-depends:     base >= 3 && < 5, split >=0.2 && <0.3
+  build-depends:     base >= 3 && < 5, split >=0.2 && <0.3, text >= 0.11
   exposed-modules:   Text.PrettyPrint.Boxes
   extensions:        CPP
   include-dirs:      include
