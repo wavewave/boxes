@@ -23,7 +23,7 @@ library
 Test-Suite test-boxes
   type:              exitcode-stdio-1.0
   main-is:           Text/PrettyPrint/Tests.hs
-  build-depends:     base >= 3 && < 5, split >=0.2 && <0.3, QuickCheck
+  build-depends:     base >= 3 && < 5, split >=0.2 && <0.3, text >= 0.11, QuickCheck, quickcheck-text
   extensions:        CPP
   include-dirs:      include
   cpp-options:       -DTESTING

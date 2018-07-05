@@ -1,3 +1,6 @@
+{-# LANGUAGE OverloadedStrings #-}
+import Data.Monoid (mappend)
+import Data.Text.Arbitrary ()
 import Test.QuickCheck
 import Text.PrettyPrint.Boxes
 
@@ -56,7 +59,7 @@ arbContent n =
 -- extensional equivalence for Boxes
 b1 ==== b2 = render b1 == render b2
 
-prop_render_text s = render (text s) == (s ++ "\n")
+prop_render_text s = render (text s) == (s `mappend` "\n")
 
 prop_empty_right_id b = b <> nullBox ==== b
 prop_empty_left_id b  = nullBox <> b ==== b
